@@ -5,7 +5,7 @@ COPY shiz/ /home/evil/shiz/
 
 RUN \
 	/debugthis.sh && \
-	pacman -S --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc discord google-chrome tigervnc pulseaudio pulseaudio-alsa && \
+	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc discord google-chrome tigervnc pulseaudio pulseaudio-alsa && \
 	cp /home/evil/shiz/xinitrc /etc/X11/xinit/ && \
 	mkdir /run/dbus
 
