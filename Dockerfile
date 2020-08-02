@@ -7,6 +7,8 @@ RUN \
 	/debugthis.sh && \
 	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc discord google-chrome tigervnc pulseaudio pulseaudio-alsa && \
 	cp /home/evil/shiz/xinitrc /etc/X11/xinit/ && \
+	cp /home/evil/shiz/startup_plus.sh / && \
+	chmod +x startup_plus.sh && \
 	mkdir /run/dbus
 
 # for rutorrent (via nginx)
