@@ -1,8 +1,8 @@
 systemd-machine-id-setup
 /usr/sbin/sshd
 dbus-daemon --system
-touch /dbusr.env
-chmod 666 /dbusr.env
+touch /dbus.envr
+chmod 666 /dbus.envr
 /runevilorroot.sh 'dbus-launch > /dbus.envr'
 sed -e 's/^/export /' /dbus.envr > /dbus.env 
 chmod 666 /dbus.env
