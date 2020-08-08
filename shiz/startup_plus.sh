@@ -1,5 +1,6 @@
 rm /home/evil/.vnc/*.log /home/evil/.vnc/*.pid /home/evil/.vnc/cor*
 systemd-machine-id-setup
+chsh -s /bin/bash http
 /usr/sbin/sshd
 dbus-daemon --system
 touch /dbus.envr
