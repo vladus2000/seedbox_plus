@@ -5,7 +5,7 @@ COPY shiz/ /home/evil/shiz/
 
 RUN \
 	/debugthis.sh && \
-	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc discord google-chrome tigervnc pulseaudio pulseaudio-alsa xfce4-pulseaudio-plugin xterm pavucontrol noto-fonts noto-fonts-emoji noto-fonts-extra && \
+	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc discord google-chrome tigervnc pulseaudio pulseaudio-alsa xfce4-pulseaudio-plugin xterm pavucontrol noto-fonts noto-fonts-emoji noto-fonts-extra soulseekqt && \
 	cp /home/evil/shiz/xinitrc /etc/X11/xinit/ && \
 	cp /home/evil/shiz/startup_plus.sh / && \
 	chmod +x startup_plus.sh && \
