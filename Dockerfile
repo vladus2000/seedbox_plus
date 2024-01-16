@@ -5,11 +5,13 @@ COPY shiz/ /home/evil/shiz/
 
 RUN \
 	/debugthis.sh && \
-	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc mpv discord google-chrome tigervnc pulseaudio pulseaudio-alsa xfce4-pulseaudio-plugin xterm pavucontrol noto-fonts noto-fonts-emoji noto-fonts-extra soulseekqt && \
+        /install-devel.sh && \
+	pacman -Syyu --needed --noconfirm xorg-server xorg-apps xorg-drivers xfce4 vlc mpv discord tigervnc pulseaudio pulseaudio-alsa xfce4-pulseaudio-plugin xterm pavucontrol noto-fonts noto-fonts-emoji noto-fonts-extra npm && \
+	su - evil -c 'yay -S --needed --noconfirm google-chrome soulseekqt' && \
 	cp /home/evil/shiz/xinitrc /etc/X11/xinit/ && \
 	cp /home/evil/shiz/startup_plus.sh / && \
 	chmod +x startup_plus.sh && \
-	mkdir /run/dbus
+	mkdir -p /run/dbus
 
 # for rutorrent (via nginx)
 EXPOSE 8069
